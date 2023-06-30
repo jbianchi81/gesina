@@ -15,6 +15,9 @@ engine = create_engine(
     f"postgresql://{config.database_user}:{config.database_password}@{config.database_host}/{config.database_name}"
 )
 
+import logging
+logging.basicConfig()
+logging.getLogger('sqlalchemy.engine').setLevel(logging.DEBUG)
 
 @contextmanager
 def get_session():
