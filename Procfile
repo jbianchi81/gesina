@@ -1,1 +1,1 @@
-web: gunicorn --workers=4 --pythonpath src src.app:app
+web: gunicorn --workers=4 --pythonpath --timeout 90 src src.app:app
