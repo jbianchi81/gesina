@@ -7,4 +7,4 @@ done
 
 echo "Database up and running!"
 
-gunicorn --bind 0.0.0.0:5000 -w 4 --pythonpath src src.app:app
+gunicorn --bind 0.0.0.0:5000 -w 4 --timeout 90 --pythonpath src src.app:app
